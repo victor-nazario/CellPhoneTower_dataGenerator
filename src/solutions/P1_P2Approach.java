@@ -1,5 +1,12 @@
 package solutions;
 
+/**
+*
+* @author Víctor A. Nazario Morales 843-15-4984 S-050
+* @author Jairo Rosado Soto 844-12-7240 S-070
+*
+*/
+
 import java.util.Iterator;
 
 import interfaces.MySet;
