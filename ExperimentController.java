@@ -5,8 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.AbstractMap;
 import java.util.ArrayList;
-import java.util.Map;
-
 import dataGenerator.DataGenerator;
 
 /**
@@ -66,7 +64,7 @@ public class ExperimentController{
 			for (int r = 0; r<repetitionsPerSize; r++) {
 				// The following will be the common dataset to be used in the current 
 				// trial by all the strategies being tested.
-				Integer[][][] dataSet = generateData(n, m, size);  
+				Object[][][] dataSet = generateData(n, m, size);  
 				
 				// Apply each one of the strategies being tested using the previous 
 				// dataset (of size size) as input; and, for each, estimate the time
@@ -99,11 +97,11 @@ public class ExperimentController{
 		}
 	}
 	
-	private Integer[][][] generateData(int n, int m, int size) {
+	private Object[][][] generateData(int n, int m, int size) {
 		DataGenerator dg = new DataGenerator(n, m, size);
-		Integer[][][] dataSet = (Integer[][][]) dg.generateData();  
+		Object[][][] dataSet = dg.generateData();  
 
-		return (Integer[][][]) dataSet;
+		return dataSet;
 	}
 
 	public void saveResults() throws FileNotFoundException { 

@@ -49,7 +49,7 @@ extends ArrayList<Map.Entry<Integer, Float>> {
         return strategy.getName(); 
     }
     
-    public void runTrial(Integer[][][] dataSet) { 
+    public void runTrial(Object[][][] dataSet) { 
 		int m = dataSet[0].length;
 		MySet[] s = new MySet[m];
 
@@ -57,17 +57,17 @@ extends ArrayList<Map.Entry<Integer, Float>> {
 			for(int j = 0; j < m; j++) {
 				s[j] =  new Set1<>();
 				for(int i = 0; i < dataSet.length; i++) {
-					for(int k = 0; k < dataSet[i][j].length; k++)
-						s[j].add(dataSet[i][j][k]);
+					for(int z = 0; z < dataSet[i][j].length; z++)
+						s[j].add(dataSet[i][j][z]); // add to set t[j] the element dataset[i][j][z]
 				}
 			}
 		}
-		else if(strategy.getName().equals("2")){
+		else {
 			for(int j = 0; j < m; j++) {
 				s[j] =  new Set2<>();
 				for(int i = 0; i < dataSet.length; i++) {
-					for(int k = 0; k < dataSet[i][j].length; k++)
-						s[j].add(dataSet[i][j][k]);
+					for(int z = 0; z < dataSet[i][j].length; z++)
+						s[j].add(dataSet[i][j][z]); // add to set t[j] the element dataset[i][j][z]
 				}
 			}
 		}
