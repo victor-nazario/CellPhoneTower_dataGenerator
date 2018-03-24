@@ -16,10 +16,22 @@ import mySetImplementations.Set2;
 
 public class P4Approach<E> extends P3Approach<E>{
 
+	/**
+	 * Constructor for the solution instance
+	 * @param name the given name for the specific solution
+	 */
+	
 	public P4Approach(String name) {
 		super(name);
 	}
 
+	
+	/**
+	 * This method processes an array of crimes and companies to produce an array of sets that is the intersection of all numbers. 
+	 * @param t the given MySet array to find the intersection
+	 */
+	
+	
 	@Override
 	public MySet<E> intersectSets(MySet<E>[] t) {
 		ArrayList<E> allElements = new ArrayList<E>(); 

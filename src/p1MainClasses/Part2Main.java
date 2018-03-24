@@ -8,6 +8,11 @@ import solutions.P1_P2Approach;
 import solutions.P3Approach;
 import solutions.P4Approach;
 
+/**
+ * @author Víctor A. Nazario Morales 843-15-4984 S-050
+ * @author Jairo Rosado Soto 844-12-7240 S-070
+ */
+
 public class Part2Main {
 
 	static int[] values = {10,50,1000,50000,1000,200};
